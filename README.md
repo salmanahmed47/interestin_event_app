@@ -1,6 +1,6 @@
 # interestin_app
 
-A new Flutter project.
+It's an Event Management App for the University Student with AI Receommendations based on interest with a Review System.
 
 ## Getting Started
 
