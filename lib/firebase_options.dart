@@ -17,7 +17,10 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      return web;
+      throw UnsupportedError(
+        'DefaultFirebaseOptions have not been configured for web - '
+        'you can reconfigure this by running the FlutterFire CLI again.',
+      );
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -25,9 +28,15 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
-        return windows;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for windows - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -40,57 +49,20 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCzplyeCw0lqtaAFocCxhhH__-uefHyGQQ',
-    appId: '1:402872740988:web:485b4a9b13bb70118eedf9',
-    messagingSenderId: '402872740988',
-    projectId: 'flutter-test-project-58f59',
-    authDomain: 'flutter-test-project-58f59.firebaseapp.com',
-    databaseURL:
-        'https://flutter-test-project-58f59-default-rtdb.firebaseio.com',
-    storageBucket: 'flutter-test-project-58f59.appspot.com',
+  static const FirebaseOptions android = FirebaseOptions(
+    apiKey: 'AIzaSyDwmSUXWWrOl-hGYcqXm-BhH7dyMTuY2CY',
+    appId: '1:891324935277:android:4c2f1d3da2839a6da82364',
+    messagingSenderId: '891324935277',
+    projectId: 'events-app-salman',
+    storageBucket: 'events-app-salman.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDEJXbb0suQh0iWyvFUXJvSLc77iJJFuI8',
-    appId: '1:402872740988:ios:213b07dafb0038d28eedf9',
-    messagingSenderId: '402872740988',
-    projectId: 'flutter-test-project-58f59',
-    databaseURL:
-        'https://flutter-test-project-58f59-default-rtdb.firebaseio.com',
-    storageBucket: 'flutter-test-project-58f59.appspot.com',
-    iosBundleId: 'com.example.ubtsFyp',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDEJXbb0suQh0iWyvFUXJvSLc77iJJFuI8',
-    appId: '1:402872740988:ios:213b07dafb0038d28eedf9',
-    messagingSenderId: '402872740988',
-    projectId: 'flutter-test-project-58f59',
-    databaseURL:
-        'https://flutter-test-project-58f59-default-rtdb.firebaseio.com',
-    storageBucket: 'flutter-test-project-58f59.appspot.com',
-    iosBundleId: 'com.example.ubtsFyp',
-  );
-
-  static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyCzplyeCw0lqtaAFocCxhhH__-uefHyGQQ',
-    appId: '1:402872740988:web:485b4a9b13bb70118eedf9',
-    messagingSenderId: '402872740988',
-    projectId: 'flutter-test-project-58f59',
-    authDomain: 'flutter-test-project-58f59.firebaseapp.com',
-    databaseURL:
-        'https://flutter-test-project-58f59-default-rtdb.firebaseio.com',
-    storageBucket: 'flutter-test-project-58f59.appspot.com',
-  );
-
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAFE0hrrhIm5OVC18r9JN733kv_9I5KMFE',
-    appId: '1:402872740988:android:c52c4c7065e91dc78eedf9',
-    messagingSenderId: '402872740988',
-    projectId: 'flutter-test-project-58f59',
-    databaseURL:
-        'https://flutter-test-project-58f59-default-rtdb.firebaseio.com',
-    storageBucket: 'flutter-test-project-58f59.appspot.com',
+    apiKey: 'AIzaSyC-h2POaHOMYosG52yxYdUoxkBlsZcU8N4',
+    appId: '1:891324935277:ios:d61010d67f5167a1a82364',
+    messagingSenderId: '891324935277',
+    projectId: 'events-app-salman',
+    storageBucket: 'events-app-salman.appspot.com',
+    iosBundleId: 'com.example.interestinApp',
   );
 }
