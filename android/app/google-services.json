@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "891324935277",
+    "project_id": "events-app-salman",
+    "storage_bucket": "events-app-salman.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:891324935277:android:4c2f1d3da2839a6da82364",
+        "android_client_info": {
+          "package_name": "com.absal.ai_event_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwmSUXWWrOl-hGYcqXm-BhH7dyMTuY2CY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
