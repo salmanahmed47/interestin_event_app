@@ -1,12 +1,12 @@
 // lib/screens/common/onboarding_screen.dart
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+// import 'package:shared_preferences/shared_preferences.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
 
   @override
-  _OnboardingScreenState createState() => _OnboardingScreenState();
+  State<OnboardingScreen>  createState() => _OnboardingScreenState();
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
@@ -45,15 +45,15 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   // Save that onboarding has been seen
   Future<void> _completeOnboarding() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setBool('onboarding_complete', true);
+    // SharedPreferences prefs = await SharedPreferences.getInstance();
+    // await prefs.setBool('onboarding_complete', true);
     // Navigate to the login screen
     Navigator.pushReplacementNamed(context, '/login');
   }
 
   @override
   void dispose() {
-    _pageController.dispose();
+    _pageController.dispose(); 
     super.dispose();
   }
 
