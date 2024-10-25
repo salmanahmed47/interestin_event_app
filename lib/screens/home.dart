@@ -5,6 +5,6 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(context) {
-    return const Text('Home');
+    return const Text('Akhlaq Lodo');
   }
 }
