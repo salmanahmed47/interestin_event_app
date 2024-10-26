@@ -51,7 +51,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyDwmSUXWWrOl-hGYcqXm-BhH7dyMTuY2CY',
-    appId: '1:891324935277:android:4c2f1d3da2839a6da82364',
+    appId: '1:891324935277:android:55dd13c6b9131dd5a82364',
     messagingSenderId: '891324935277',
     projectId: 'events-app-salman',
     storageBucket: 'events-app-salman.appspot.com',
@@ -65,4 +65,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'events-app-salman.appspot.com',
     iosBundleId: 'com.example.interestinApp',
   );
+
 }

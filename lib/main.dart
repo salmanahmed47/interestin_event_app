@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -18,9 +17,9 @@ void main() async {
     await Firebase.initializeApp(
       options: DefaultFirebaseOptions.currentPlatform,
     );
+    print('Firebase working');
   } catch (e) {
     // Handle error
-    print('Error initializing Firebase: $e');
   }
   runApp(const MyApp());
 }
@@ -44,8 +43,9 @@ class MyAppState extends State<MyApp> {
   }
 
   Future<void> _setupDefaultHome() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    bool seenOnboarding = prefs.getBool('onboarding_complete') ?? false;
+    // SharedPreferences prefs = await SharedPreferences.getInstance();
+    // bool seenOnboarding = prefs.getBool('onboarding_complete') ?? false;
+    bool seenOnboarding = false;
 
     if (!seenOnboarding) {
       _defaultHome = const OnboardingScreen();
